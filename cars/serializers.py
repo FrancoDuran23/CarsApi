@@ -22,13 +22,14 @@ class CarSerializers(serializers.ModelSerializer):
 
     def validate_imagen(self, imagen):
         # Validar el tamaño de la imagen si es necesario
-        max_size = (1024, 1024)  # Tamaño máximo permitido (ancho, alto)
-
+        max_size = (1024, 1024)  # Tamaño máximo permitido (ancho, alto)        
         image = Image.open(imagen)
+        
         if image.size > max_size:
             raise serializers.ValidationError("La imagen supera el tamaño máximo permitido.")
 
         return imagen
+    
     class Meta:
         model = Car
         fields = ['brand','model', 'year', 'price', 'vehicle_type', 'imagen']
