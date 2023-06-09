@@ -69,20 +69,21 @@ La API proporciona las siguientes rutas y endpoints para interactuar con los rec
 ### Endpoint: Filtrado y Ordenamiento de Automóviles
 
 Este endpoint permite filtrar y ordenar automóviles en base a diferentes criterios. A continuación se muestra una explicación detallada de su funcionamiento:
-## URL
+
+### URL
 
 - `GET /api/filter_and_sort/<filter_by>/<order_by>/`: Filtra y Ordena la Lista de todos los Autos
 
-## Parámetros de consulta
+### Parámetros de consulta
 
-# filter_by: (obligatorio) Indica el tipo de filtro a aplicar. Los valores posibles son:
+### filter_by: (obligatorio) Indica el tipo de filtro a aplicar. Los valores posibles son:
 
   0: Sin filtro
   1: Filtrar por autos
   2: Filtrar por pickups y comerciales
   3: Filtrar por SUVs y crossovers
 
-# order_by: (obligatorio) Indica el tipo de ordenamiento a aplicar. Los valores posibles son:
+### order_by: (obligatorio) Indica el tipo de ordenamiento a aplicar. Los valores posibles son:
 
   1: Ordenar por precio de menor a mayor
   2: Ordenar por precio de mayor a menor
